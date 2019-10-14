@@ -42,5 +42,5 @@ The following example game is won by the first player, X:
 * [Object Oriented Programming reference](https://www.theodinproject.com/courses/ruby-programming/lessons/object-oriented-programming)
 * [Project Instruction](https://www.theodinproject.com/courses/ruby-programming/lessons/oop)
 * [Project Demo](https://repl.it/@islamfalguni/tic-tac-toe)
-* Developer: @Falguni Islam (https://github.com/falguniislam)
+* ``Developer:[Falguni Islam](https://github.com/falguniislam)
 
