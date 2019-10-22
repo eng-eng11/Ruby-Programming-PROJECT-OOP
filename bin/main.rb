@@ -26,7 +26,7 @@ def update_matrix(player_id, selected_cell)
   else
     figure = 'O'
   end
-  $board[selected_cell - 1] = figure;
+  $board[selected_cell - 1] = figure
   print_board
 end
 
