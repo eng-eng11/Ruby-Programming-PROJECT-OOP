@@ -1,0 +1,7 @@
+Please input your name for player1: 
+Player, Please enter your position (1 - 9) or press 'q' to exit game: 
+Sorry to see you go, see you next time! 
+Player, Please enter your position (1 - 9) or press 'q' to exit game: 
+Please enter an valid number, thanks! 
+Player, Please enter your position (1 - 9) or press 'q' to exit game: 
+Try again, that spot has been taken already
