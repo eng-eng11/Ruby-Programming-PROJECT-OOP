@@ -1,10 +1,11 @@
 class Player
+  include Interface
 
   attr_reader :char
   attr_accessor :name, :inputs
 
   def initialize(name, char)
-    @name = name
+    @name = get_input('name', name)
     @inputs = []
     @char = char
   end
