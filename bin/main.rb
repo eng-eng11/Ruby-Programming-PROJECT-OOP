@@ -1,4 +1,4 @@
-require 'colorize'  # Need to run 'gem install colorize'
+# require 'colorize'  # Need to run 'gem install colorize'
 
 # self customized libary
 require './lib/interface'
@@ -9,16 +9,15 @@ require './lib/game'
 include Interface
 
 loop do
-  show_text('welcome')
+  get_input('welcome')
 
-  player1 = Player.new(get_input('player1'), "X".red)
-  player2 = Player.new(get_input('player2'), "O".green)
+  player1 = Player.new("player1", "X")
+  player2 = Player.new("player2", "O")
   board = Board.new
-
   game = Game.new(player1, player2, board)
 
   if !game.play
-    show_text('finish')
+    get_input('finish')
     break
   end
 
