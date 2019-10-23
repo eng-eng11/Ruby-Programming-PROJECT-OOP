@@ -42,6 +42,27 @@ def print_board
   end
 end
 
+# this method checks whether there is a winner or not after movement number 5
+def check_matrix_for_winner(player_id)
+  if player_id == 1
+    figure = 'X'
+  else
+    figure = 'O'
+  end
+  if $board[0] == figure && $board[3] == figure && $board[6] == figure ||
+      $board[1] == figure && $board[4] == figure && $board[7] == figure ||
+      $board[2] == figure && $board[5] == figure && $board[8] == figure ||
+      $board[0] == figure && $board[1] == figure && $board[2] == figure ||
+      $board[3] == figure && $board[4] == figure && $board[5] == figure ||
+      $board[6] == figure && $board[7] == figure && $board[8] == figure ||
+      $board[0] == figure && $board[4] == figure && $board[8] == figure ||
+      $board[2] == figure && $board[4] == figure && $board[6] == figure
+      true
+  else
+    false
+  end
+end
+
 puts "Welcome, below you can find the board for the game:"
 $board = create_board
 print_board
@@ -52,7 +73,7 @@ while i < $board.length
   else
     player_id = 2
   end
-  puts "Player #{player_id} please maker your move:"
+  puts "Player #{player_id} please make your move:"
   valid_input = false
   while !valid_input
     player_selected_cell = gets.chomp.to_i
@@ -65,6 +86,16 @@ while i < $board.length
       end
     else
       puts "Please enter a number between 1 and 9:"
+    end
+  end
+  if i >= 4
+    if check_matrix_for_winner(player_id)
+      puts "\n\nGame Over!\n\nPlayer #{player_id} wins!"
+      break
+    else
+      if i == 8
+        puts "\n\nIt's a Draw!"
+      end
     end
   end
   i += 1
